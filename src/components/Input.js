@@ -1,7 +1,12 @@
 import React from 'react';
 
-export default (props) => {
+export default React.forwardRef((props,ref) => {
+
   return(
-    <input type={props.type} name={props.name}></input>
+
+    <div className="mdl-textfield mdl-js-textfield">
+      <input ref={ref} className="mdl-textfield__input" type="text" id="sample1" name={props.name}/>
+      <label className="mdl-textfield__label" htmlFor="sample1">{props.name}</label>
+    </div>
   )
-}
+})
