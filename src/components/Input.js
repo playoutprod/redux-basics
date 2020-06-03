@@ -1,7 +1,8 @@
 import React from 'react';
 
-export default (props) => {
+export default React.forwardRef((props,ref) => {
+
   return(
-    <input type={props.type} name={props.name}></input>
+    <input ref={ref} type={props.type} name={props.name}></input>
   )
-}
+})

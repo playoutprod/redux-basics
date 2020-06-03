@@ -1,21 +1,23 @@
 import React from 'react';
-import Phonebook from './Phonebook'
+import Phonebook from './Phonebook';
+import Form from './Form';
+import Input from './Input';
 import Button from './Button';
 
 const App = (props) => {
 
-    const handleSubmit = (e) =>{
-
+    const handleSubmit = (values) =>{
+      console.log(values)
     }
 
     return(
       <div className="app">
         <Phonebook/>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Input type="text" name="first-name"/>
           <Input type="text" name="last-name"/>
           <Input type="numbers" name="phone"/>
-          <Button handleClick={handleSubmit} text="Add user"/>
+          <Button text="Add user" type="submit"/>
         </Form>
       </div>
     )
