@@ -22,7 +22,7 @@ export default (props) => {
         props.children.map((childNode,k) => {
           const Component = childNode.type;
           if(childNode.props.name){
-            inputs.current.push(useRef())
+            inputs.current.push(React.createRef())
           }
           const props = {
             key:k,
