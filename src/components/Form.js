@@ -7,16 +7,17 @@ export default (props) => {
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    if(props.onSubmit){
+
+    if(props.handleSubmit){
       const values = {}
       inputs.current.forEach((inputRef, i) => {
         values[inputRef.current.name] = inputRef.current.value
       });
-      props.onSubmit(values);
+      props.handleSubmit(values);
     }
   }
   return(
-    <form>
+    <form onSubmit={(e)=>{e.preventDefault()}}>
       {
         props.children.map((childNode,k) => {
           const Component = childNode.type;
