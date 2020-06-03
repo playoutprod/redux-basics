@@ -1,7 +1,18 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2em;
+}
+.phonebook{
+  padding: 2em
+}
+
 form{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding:1em;
+  padding:2em;
 }

@@ -5,31 +5,31 @@ import {mapStateToProps} from "../reducers/users";
 
 const Form = (props) => {
 
-  const inputs = useRef([]);
+  const inputs = [];
+  const form = useRef(null);
 
   const handleSubmit = (e)=>{
     e.preventDefault();
 
     const values = {}
-    inputs.current.forEach((inputRef, i) => {
+    inputs.forEach((inputRef, i) => {
       values[inputRef.current.name] = inputRef.current.value
     });
-
+    props.add_user(values);
+    form.current.reset();
   }
 
-
-
   return(
-    <form onSubmit={(e)=>{e.preventDefault()}}>
+    <form ref={form} onSubmit={(e)=>{e.preventDefault()}}>
       {
         props.children.map((childNode,k) => {
           const Component = childNode.type;
           if(childNode.props.name){
-            inputs.current.push(React.createRef())
+            inputs.push(React.createRef())
           }
           const props = {
             key:k,
-            ref:inputs.current[k],
+            ref:inputs[k],
             ...childNode.props,
           }
           if(childNode.props.type === 'submit'){

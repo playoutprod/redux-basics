@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 
 export default React.forwardRef((props,ref) => {
 
-  return(
+  const divRef=useRef();
 
-    <div className="mdl-textfield mdl-js-textfield">
+  useEffect(()=>{
+    divRef.current.classList.remove("is-upgraded");
+    divRef.current.classList.remove("is-dirty");
+  })
+
+  return(
+    <div ref={divRef} className="mdl-textfield mdl-js-textfield">
       <input ref={ref} className="mdl-textfield__input" type="text" id="sample1" name={props.name}/>
       <label className="mdl-textfield__label" htmlFor="sample1">{props.name}</label>
     </div>

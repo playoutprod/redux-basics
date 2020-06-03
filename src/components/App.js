@@ -8,13 +8,16 @@ const App = (props) => {
 
     return(
       <div className="app">
-        <Phonebook/>
+
         <Form>
           <Input type="text" name="first-name"/>
           <Input type="text" name="last-name"/>
           <Input type="numbers" name="phone"/>
           <Button text="Add user" type="submit"/>
         </Form>
+
+        <Phonebook/>
+        
       </div>
     )
 }
