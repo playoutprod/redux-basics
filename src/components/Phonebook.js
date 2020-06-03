@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default (props) =>{
+const Phonebook = (props) =>{
   return(
     <div>
       {
@@ -16,3 +16,4 @@ Phonebook.propTypes = {
 Phonebook.defaultProps = {
   users:[]
 }
+export default Phonebook;
