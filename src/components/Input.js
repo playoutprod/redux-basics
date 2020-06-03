@@ -6,7 +6,7 @@ export default React.forwardRef((props,ref) => {
 
     <div className="mdl-textfield mdl-js-textfield">
       <input ref={ref} className="mdl-textfield__input" type="text" id="sample1" name={props.name}/>
-      <label className="mdl-textfield__label" for="sample1">{props.name}</label>
+      <label className="mdl-textfield__label" htmlFor="sample1">{props.name}</label>
     </div>
   )
 })
