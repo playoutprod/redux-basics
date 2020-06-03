@@ -2,6 +2,6 @@ import React from 'react';
 
 export default (props) => {
   return(
-    <button onClick={props.handleClick}>{props.text}</button>
+    <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={props.handleClick}>{props.text}</button>
   )
 }
