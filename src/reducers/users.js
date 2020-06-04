@@ -13,6 +13,12 @@ let usersReducer = (state = stateInit, action = {}) => {
     case action_types.add:
       // On retourne une copie du state modifié :
       return { ...state, users : [ ...state.users, action.user]};
+    //Action type = add question
+    case action_types.remove:
+
+      const users = [...state.users];
+      users.splice(action.userID,1);
+      return { ...state, users:users};
 
     default:
       // Si aucun changement de state

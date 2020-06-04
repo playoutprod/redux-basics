@@ -8,6 +8,11 @@
 .phonebook{
   padding: 2em
 }
+.phonebook .remove img{
+  width:1.5em;
+  height:auto;
+  cursor:pointer;
+}
 
 form{
   display: flex;
