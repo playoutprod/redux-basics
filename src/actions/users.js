@@ -21,8 +21,14 @@ export const mapDispatchToProps = (dispatch) => {
   })
 }
 
-export const onlyRemoveToProps = (dispatch) => {
+export const onlyAddToProps = (dispatch) =>{
   return({
-    remove_user : (payload) => dispatch(remove_user(payload))
+    add_user : (payload) => {dispatch(add_user(payload))}
+  })
+}
+
+export const onlyRemoveToProps = (dispatch) =>{
+  return({
+    remove_user : (payload) => {dispatch(remove_user(payload))}
   })
 }

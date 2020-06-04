@@ -1,7 +1,7 @@
 import React,{useRef} from 'react';
 import { connect } from "react-redux";
-import {mapDispatchToProps} from "../actions/users";
-import {mapStateToProps} from "../reducers/users";
+import {onlyAddToProps} from '../actions/users';
+import {mapStateToProps} from '../reducers/users';
 
 const Form = (props) => {
 
@@ -41,4 +41,4 @@ const Form = (props) => {
     </form>
   )
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Form);
+export default connect(mapStateToProps,onlyAddToProps)(Form);
