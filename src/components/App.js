@@ -5,7 +5,6 @@ import Input from './Input';
 import Button from './Button';
 
 const App = (props) => {
-
     return(
       <div className="app">
 
@@ -17,7 +16,7 @@ const App = (props) => {
         </Form>
 
         <Phonebook/>
-        
+
       </div>
     )
 }
