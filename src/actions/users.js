@@ -15,6 +15,7 @@ export const remove_user = (userID) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => {
+
   return({
     add_user : (payload) => dispatch(add_user(payload)),
     remove_user : (payload) => dispatch(remove_user(payload))

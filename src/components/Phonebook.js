@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import trash from '../images/trash.svg'
 
 const Phonebook = (props) =>{
+
+
   return(
     <div className="phonebook">
     <table className="mdl-data-table mdl-js-data-table">
